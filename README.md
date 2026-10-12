@@ -2,12 +2,12 @@
 
 An independent TypeScript browser extension for transferring completed standard-chess games and saved analysis from Chess.com to Lichess. No backend, analytics, passwords, cookie access, or account tokens.
 
-**0.1.1 release candidate.** Browser-specific MV3 builds are included. Firefox has been exercised against a real completed Chess.com game page; Chrome and Edge still need native runtime verification. Read [the verification matrix](docs/compatibility.md) before distribution. Nothing has been published or submitted to an extension store.
+**0.1.1 release candidate.** Browser-specific MV3 builds are included. I exercised Firefox against a real completed Chess.com game page; Chrome and Edge still need native runtime verification. Read [the verification matrix](docs/compatibility.md) before distribution. Nothing has been published or submitted to an extension store.
 
 ## Agentic Use Disclosure
-This project was personally designed by me. I selected the stack, designed the architecture, and defined the project structure.
-Implementation and testing were completed by two coding agents: one for implementation and another for testing.
-All code was personally reviewed before being committed. 
+I designed the architecture, selected the stack, and defined the project structure. 
+Two coding agents wrote the code and tests from that design. 
+I reviewed all code, including tests, before it was committed.
 
 ## Use
 
