@@ -4,6 +4,11 @@ An independent TypeScript browser extension for transferring completed standard-
 
 **0.1.1 release candidate.** Browser-specific MV3 builds are included. Firefox has been exercised against a real completed Chess.com game page; Chrome and Edge still need native runtime verification. Read [the verification matrix](docs/compatibility.md) before distribution. Nothing has been published or submitted to an extension store.
 
+## Agentic Use Disclosure
+This project was personally designed by me. I selected the stack, designed the architecture, and defined the project structure.
+Implementation and testing were completed by two coding agents: one for implementation and another for testing.
+All code was personally reviewed before being committed. 
+
 ## Use
 
 1. Open the toolbar popup and acknowledge the one-time privacy notice: **normal Lichess imports are public**, including names and metadata.
