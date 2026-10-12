@@ -1,0 +1,9 @@
+node_modules/
+.output/
+.wxt/
+release/
+.env
+.env.*
+web-ext.config.ts
+.DS_Store
+*.log

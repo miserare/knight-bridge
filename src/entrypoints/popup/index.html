@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knight Bridge</title>
+  </head>
+  <body>
+    <header>
+      <img src="/icons/48.png" width="40" height="40" alt="" />
+      <div>
+        <h1>Knight Bridge</h1>
+        <p>From game to understanding.</p>
+      </div>
+      <span class="badge">0.1</span>
+    </header>
+    <main>
+      <section id="onboarding" hidden>
+        <h2>A new perspective on your game</h2>
+        <p>
+          Send a completed Chess.com game to Lichess for review.
+          <strong>Lichess game imports are public.</strong> Players’ names and
+          PGN metadata go with the game.
+        </p>
+        <p>
+          Pending games stay on this device for 30 minutes. No analytics,
+          passwords, tokens, or cookies are collected.
+        </p>
+        <button id="consent">Got it — get started</button>
+      </section>
+      <section id="workspace" hidden>
+        <div class="eyebrow">CURRENT TAB</div>
+        <p id="context">Open a completed game or saved analysis.</p>
+        <div id="jobs"></div>
+        <details open>
+          <summary>Paste PGN or open a file</summary>
+          <button class="secondary" id="load-current" type="button" hidden>
+            Load PGN or FEN from this Chess.com tab
+          </button>
+          <label for="kind">Content</label
+          ><select id="kind">
+            <option value="game">Completed game · full report</option>
+            <option value="line">Saved analysis · exported mainline</option>
+            <option value="position">Position only · exact FEN</option></select
+          ><label for="input">PGN or full FEN</label
+          ><textarea
+            id="input"
+            rows="5"
+            spellcheck="false"
+            placeholder="Paste your full export here…"
+          ></textarea
+          ><label class="file-label" for="file"
+            >Open a PGN, FEN, or archive JSON file<input
+              id="file"
+              type="file"
+              accept=".pgn,.fen,.txt,.json" /></label
+          ><label for="orientation">Board orientation</label
+          ><select id="orientation">
+            <option value="white">White at bottom</option>
+            <option value="black">Black at bottom</option>
+          </select>
+          <p class="hint" id="line-note">
+            Transfers the complete exported mainline. Make a branch the mainline
+            in Chess.com before exporting it.
+          </p>
+          <button id="transfer">
+            Analyze on Lichess <span aria-hidden="true">↗</span>
+          </button>
+        </details>
+      </section>
+      <p id="status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <details>
+        <summary>Help &amp; privacy</summary>
+        <p>
+          Chess.com: after a game ends, choose Load PGN or FEN from this tab, or
+          use Share Game → PGN. Export the full game even if the replay cursor
+          is earlier.
+        </p>
+        <p>
+          Lichess: signed-in transfers submit the normal import form with
+          computer analysis selected. If signed out, sign in and use Continue
+          here. If limited, leave the imported game open and try Lichess’s own
+          control later.
+        </p>
+        <p>
+          A FEN opens a position, with no historical mistakes report. Never
+          reconstruct missing castling rights or earlier moves.
+        </p>
+        <p>
+          Installation: load the unpacked Chrome/Edge build, or temporarily load
+          the Firefox manifest through about:debugging. Permanent Firefox
+          installation requires Mozilla signing.
+        </p>
+        <p>
+          Independent extension; not endorsed by Chess.com or Lichess. Imports
+          are public. Clearing local data does not delete games already sent to
+          Lichess.
+        </p>
+        <button class="secondary" id="clear">Clear local extension data</button>
+      </details>
+    </main>
+    <footer>Learn from the game you played.</footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

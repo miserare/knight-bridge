@@ -1,0 +1,204 @@
+:root {
+  font:
+    14px/1.5 system-ui,
+    sans-serif;
+  color: #213a31;
+  background: #f6f8f4;
+  color-scheme: light dark;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  width: 380px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 20px;
+  border-bottom: 1px solid #dbe4db;
+  background: #edf3e9;
+}
+h1 {
+  font-size: 20px;
+  letter-spacing: -0.6px;
+  margin: 0;
+}
+header p {
+  font-size: 12px;
+  margin: 2px 0 0;
+  color: #53675b;
+}
+.badge {
+  margin-left: auto;
+  border: 1px solid #c4d1c6;
+  border-radius: 20px;
+  padding: 2px 7px;
+  font-size: 11px;
+}
+main {
+  padding: 20px;
+}
+h2 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+p {
+  margin: 8px 0 14px;
+}
+button,
+select,
+textarea,
+input {
+  font: inherit;
+}
+button {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-radius: 9px;
+  background: #205943;
+  color: #fff;
+  font-weight: 650;
+  cursor: pointer;
+  padding: 11px 14px;
+}
+button span {
+  float: right;
+}
+button:hover {
+  background: #164330;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+button.secondary {
+  background: transparent;
+  color: inherit;
+  border: 1px solid #aabeb0;
+}
+button:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+  outline: 3px solid #b56d0b;
+  outline-offset: 3px;
+}
+details {
+  border-top: 1px solid #d0ddd2;
+  padding: 13px 0;
+}
+summary {
+  font-weight: 650;
+  cursor: pointer;
+  min-height: 30px;
+}
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 650;
+  margin: 12px 0 5px;
+}
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #a9bbb0;
+  border-radius: 7px;
+  padding: 9px;
+  background: #fff;
+  color: #243d31;
+}
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.file-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+input[type="file"] {
+  max-width: 100%;
+  font-size: 12px;
+}
+.hint {
+  font-size: 12px;
+  color: #52675a;
+  margin-top: 12px;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+  color: #5d7466;
+}
+#status:not(:empty) {
+  border-left: 3px solid #508967;
+  padding: 10px;
+  background: #e8f1e8;
+}
+.job {
+  padding: 12px;
+  border: 1px solid #b8ccbc;
+  border-radius: 9px;
+  margin-bottom: 14px;
+}
+.job p {
+  font-size: 13px;
+}
+.job button {
+  background: #e0eddf;
+  color: #233e2e;
+}
+footer {
+  text-align: center;
+  padding: 12px;
+  font-size: 11px;
+  color: #53675b;
+}
+[hidden] {
+  display: none !important;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: #1b2420;
+    color: #ecf3ec;
+  }
+  header {
+    background: #26362c;
+    border-color: #3d5143;
+  }
+  header p,
+  .hint,
+  footer,
+  .eyebrow {
+    color: #b4c7b8;
+  }
+  details {
+    border-color: #425749;
+  }
+  select,
+  textarea {
+    background: #25342b;
+    color: #f2f7f1;
+    border-color: #6b8472;
+  }
+  button {
+    background: #a8d2ac;
+    color: #16351f;
+  }
+  button:hover {
+    background: #c1e4c4;
+  }
+  #status:not(:empty) {
+    background: #293f2d;
+  }
+  .job button {
+    background: #3a5640;
+    color: #f1f7f0;
+  }
+}

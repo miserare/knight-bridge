@@ -1,0 +1,37 @@
+{
+  "name": "knight-bridge",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "description": "Transfer completed Chess.com games to Lichess",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox --mv3",
+    "postinstall": "wxt prepare",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "wxt build --mv3",
+    "build:all": "wxt build -b chrome --mv3 && wxt build -b edge --mv3 && wxt build -b firefox --mv3",
+    "release": "wxt zip -b chrome --mv3 && wxt zip -b edge --mv3 && wxt zip -b firefox --mv3 && node scripts/release.mjs",
+    "check": "npm run typecheck && npm test && npm run build:all && npm run lint:firefox",
+    "lint:firefox": "web-ext lint --source-dir .output/firefox-mv3 --warnings-as-errors",
+    "format": "prettier --write src tests scripts *.ts *.json docs README.md .github",
+    "format:check": "prettier --check src tests scripts *.ts *.json docs README.md .github"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.3",
+    "jsdom": "29.1.1",
+    "prettier": "3.9.9",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11",
+    "web-ext": "10.7.0",
+    "wxt": "0.21.4"
+  },
+  "overrides": {
+    "shell-quote": "1.11.0"
+  }
+}
